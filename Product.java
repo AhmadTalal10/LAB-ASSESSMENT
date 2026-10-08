@@ -2,11 +2,10 @@ public class Product{
   private static String id;
   private static double maxPrice=0 ;
   private static double  minPrice=0;
-  private String name;
   private double price;
   private int qtty;
   private static int count=0;
-
+  private String name;
 
  public Product(String name, double price, int qtty){
    this.name=name;
@@ -14,15 +13,16 @@ public class Product{
    this.qtty=qtty;
    count++;
    id = String.format("p%03d",count);
-     if(maxPrice < price){
+     if(price > maxPrice){
      maxPrice=price;
 }
-    if(minPrice > price){
+    if(price < minPrice ){
      minPrice=price;
 }
+ else if(minPrice==0){
+ minPrice=price;
 
-
-
+}
 }
 
    public void displayProduct(){
@@ -34,6 +34,7 @@ public class Product{
     System.out.println("ID : " + id);
 }
 }
+
 
 
 
