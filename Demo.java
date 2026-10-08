@@ -4,7 +4,11 @@ public class Demo{
       p1.displayProduct();
      System.out.println("\n");
       
-     Product p2= new Product("AC", 50000, 01);
-         p2.displayProduct();
+     Product p2= new Product("AC", 50000, 3); 
+     p2.displayProduct();
+      System.out.println("\n");
+
+       Product p3=new Product("CAR", 200000, 1);
+       p3.displayProduct();
 }
 }
